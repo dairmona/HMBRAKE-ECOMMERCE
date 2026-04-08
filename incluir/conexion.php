@@ -1,0 +1,20 @@
+<?php
+// Datos de conexión a la base de datos
+$host = "localhost";
+$usuario = "root"; // Cambia esto por tu nombre de usuario de MySQL, si es diferente
+$password = ""; // Cambia esto por tu contraseña de MySQL si tienes una
+$base_de_datos = "hmbrake-ecommerce"; // Cambia esto por tu contraseña de MySQL si tienes una
+
+// Crear la conexión
+$conexion = new mysqli($host, $usuario, $password, $base_de_datos);
+
+// Verificar la conexión
+if ($conexion->connect_error) {
+    die("Error de conexión: " . $conexion->connect_error);
+} else {
+    echo "";
+    echo password_hash("12345", PASSWORD_DEFAULT);
+}
+
+// Establecer el conjunto de caracteres a UTF-8
+$conexion->set_charset("utf8");
